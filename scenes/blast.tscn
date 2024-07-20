@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://dewqy4hm42d40"]
+
+[ext_resource type="Texture2D" uid="uid://ds2jbyu3xppic" path="res://assets/spr_meteor_small.png" id="1_parqd"]
+[ext_resource type="Script" path="res://scripts/blast.gd" id="1_xf8cx"]
+
+[sub_resource type="GDScript" id="GDScript_6j826"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tfex8"]
+
+[node name="blast" type="Area2D"]
+script = ExtResource("1_xf8cx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.5, -1)
+scale = Vector2(0.175926, 0.195652)
+texture = ExtResource("1_parqd")
+script = SubResource("GDScript_6j826")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tfex8")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://bf6odn0rct507"]
 
-[ext_resource type="Script" path="res://scripts/character.gd" id="1_xgwwl"]
+[ext_resource type="Script" path="res://scripts/Character.gd" id="1_xgwwl"]
 [ext_resource type="Texture2D" uid="uid://pleg6l8plud" path="res://assets/space man.png" id="1_ywuun"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bq4n4"]
