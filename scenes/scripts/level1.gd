@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var powerup_sound = $powerup
-
+		
 signal exit
 var points = false
 func _on_coin_point():
