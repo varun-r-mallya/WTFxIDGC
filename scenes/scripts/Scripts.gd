@@ -50,7 +50,8 @@ func process_current_layer():
 		var surrounding_tiles = tilemap.get_surrounding_cells(tile)
 		for surrounding_tile in surrounding_tiles:
 			if tilemap.get_cell_tile_data(0, surrounding_tile) != null and surrounding_tile not in next_layer:
-				next_layer.append(surrounding_tile)
+				if (tilemap.get_cell_atlas_coords(0,surrounding_tile) ==Vector2i(1,3)) and (tilemap.get_cell_source_id(0,surrounding_tile)==2):
+					next_layer.append(surrounding_tile)
 
 		# Erase the current tile
 		
@@ -69,10 +70,11 @@ func _on_bullet_manager_send_detect(pos):
 	#print(pos)
 	clicked_pos = tilemap.local_to_map(pos)
 	print(clicked_pos)
-	if tilemap.get_cell_tile_data(0, clicked_pos) != null:
-		if layers_to_process.size()>0:
-			layers_to_process[0].append(clicked_pos)
-		else:
-			layers_to_process.append([clicked_pos])
+	if (tilemap.get_cell_tile_data(0, clicked_pos) != null):
+		if (tilemap.get_cell_atlas_coords(0,clicked_pos) == Vector2i(1,3)) and (tilemap.get_cell_source_id(0,clicked_pos)==2):
+			if layers_to_process.size()>0:
+				layers_to_process[0].append(clicked_pos)
+			else:
+				layers_to_process.append([clicked_pos])
 	
 	
