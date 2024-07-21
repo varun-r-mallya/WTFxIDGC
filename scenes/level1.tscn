@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://bk25ywvvmj3sx"]
+[gd_scene load_steps=44 format=3 uid="uid://bk25ywvvmj3sx"]
 
 [ext_resource type="PackedScene" uid="uid://cuyoxacnxv36q" path="res://scenes/player.tscn" id="1_47qec"]
 [ext_resource type="Script" path="res://scenes/scripts/level1.gd" id="1_sko76"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://scenes/scripts/Exit.gd" id="9_w6jt0"]
 [ext_resource type="Script" path="res://scenes/scripts/restart.gd" id="10_f7oku"]
 [ext_resource type="Texture2D" uid="uid://qg1epnsv43af" path="res://Assets/sprites/arrow.png" id="10_uildg"]
+[ext_resource type="Texture2D" uid="uid://2lfailf1kbou" path="res://Assets/sprites/refresh.png" id="13_bchce"]
 [ext_resource type="Texture2D" uid="uid://haech2wrw7xg" path="res://Assets/sprites/background final1.png" id="14_s85vp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_arxba"]
@@ -661,6 +662,14 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_2fbbv"]
 radius = 5.09902
 
+[sub_resource type="InputEventKey" id="InputEventKey_po56q"]
+device = -1
+keycode = 82
+unicode = 114
+
+[sub_resource type="Shortcut" id="Shortcut_gjuhr"]
+events = [SubResource("InputEventKey_po56q")]
+
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_sko76")
 
@@ -669,6 +678,7 @@ position = Vector2(-190, 205)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -5)
+offset = Vector2(0, -42)
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 
@@ -752,11 +762,12 @@ shape = SubResource("CircleShape2D_2fbbv")
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="restart" type="Button" parent="UI"]
-offset_left = 1070.0
-offset_top = 21.0
-offset_right = 1135.0
-offset_bottom = 52.0
-text = "Restart"
+offset_left = 1066.0
+offset_top = 13.0
+offset_right = 1140.0
+offset_bottom = 91.0
+shortcut = SubResource("Shortcut_gjuhr")
+icon = ExtResource("13_bchce")
 script = ExtResource("10_f7oku")
 
 [node name="level" type="Label" parent="UI"]
