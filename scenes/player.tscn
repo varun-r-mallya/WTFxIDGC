@@ -1,0 +1,81 @@
+[gd_scene load_steps=11 format=3 uid="uid://cuyoxacnxv36q"]
+
+[ext_resource type="Script" path="res://scenes/scripts/player.gd" id="1_7ga3t"]
+[ext_resource type="Texture2D" uid="uid://rqtw23lt2kds" path="res://Assets/sprites/Untitled-1-01.png" id="2_he52h"]
+[ext_resource type="Script" path="res://scenes/scripts/RayCast2D.gd" id="3_muqsm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cl7e1"]
+atlas = ExtResource("2_he52h")
+region = Rect2(306, 209, 569, 791)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfcog"]
+atlas = ExtResource("2_he52h")
+region = Rect2(3151, 209, 569, 791)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_go6ci"]
+atlas = ExtResource("2_he52h")
+region = Rect2(997, 165, 629, 907)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fp0xm"]
+atlas = ExtResource("2_he52h")
+region = Rect2(1669, 165, 629, 907)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2l6k"]
+atlas = ExtResource("2_he52h")
+region = Rect2(2341, 165, 629, 907)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_av25v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cl7e1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfcog")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_go6ci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fp0xm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2l6k")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7aqpd"]
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(10, 5)
+script = ExtResource("1_7ga3t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1.725, -1.325)
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_av25v")
+animation = &"run"
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.275, -2.325)
+shape = SubResource("CapsuleShape2D_7aqpd")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(1.725, 3.675)
+target_position = Vector2(-18, 0)
+script = ExtResource("3_muqsm")
+
+[node name="ShotTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]
