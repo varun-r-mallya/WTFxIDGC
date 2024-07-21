@@ -1,5 +1,7 @@
 extends Node
 
+var next_scene = null
+var count = 1
 func remove(string: String, removal: String):
 	var length = removal.length()
 	var i = 0

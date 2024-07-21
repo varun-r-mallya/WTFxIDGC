@@ -13,4 +13,5 @@ func _process(delta):
 
 
 func _on_pressed():
-	get_tree().change_scene_to_file("res://scenes/level1.tscn")
+	Global.next_scene = "res://scenes/level1.tscn"
+	get_tree().change_scene_to_file("res://scenes/loading1.tscn")
