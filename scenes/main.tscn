@@ -1,11 +1,74 @@
-[gd_scene load_steps=4 format=3 uid="uid://h04blba5pbd"]
+[gd_scene load_steps=15 format=3 uid="uid://h04blba5pbd"]
 
 [ext_resource type="Script" path="res://scenes/scripts/NewGame.gd" id="1_2tuvu"]
+[ext_resource type="Texture2D" uid="uid://denjpp7tduqjg" path="res://assets/sprites/grayfinalmkc.png" id="1_au1ni"]
+[ext_resource type="Texture2D" uid="uid://brk8dfwhcujw0" path="res://assets/sprites/chromatica.png" id="2_5m7vn"]
 [ext_resource type="Script" path="res://scenes/scripts/Quit.gd" id="2_t7645"]
+[ext_resource type="Texture2D" uid="uid://rvaaa8jc78f1" path="res://assets/sprites/play.png" id="3_6g8vo"]
+[ext_resource type="Texture2D" uid="uid://c2a4cq4tm3lyk" path="res://assets/sprites/quit.png" id="5_5le40"]
+[ext_resource type="Texture2D" uid="uid://rqtw23lt2kds" path="res://assets/sprites/Untitled-1-01.png" id="5_vb37r"]
 
 [sub_resource type="Theme" id="Theme_th6nn"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_cl7e1"]
+atlas = ExtResource("5_vb37r")
+region = Rect2(306, 209, 569, 791)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfcog"]
+atlas = ExtResource("5_vb37r")
+region = Rect2(3151, 209, 569, 791)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_go6ci"]
+atlas = ExtResource("5_vb37r")
+region = Rect2(997, 165, 629, 907)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fp0xm"]
+atlas = ExtResource("5_vb37r")
+region = Rect2(1669, 165, 629, 907)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2l6k"]
+atlas = ExtResource("5_vb37r")
+region = Rect2(2341, 165, 629, 907)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1gy86"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cl7e1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfcog")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_go6ci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fp0xm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2l6k")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
 [node name="UI" type="CanvasLayer"]
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(576, 328)
+scale = Vector2(2.54867, 2.48654)
+texture = ExtResource("1_au1ni")
+
+[node name="chromatica" type="Sprite2D" parent="."]
+position = Vector2(576, 216)
+scale = Vector2(0.224047, 0.224047)
+texture = ExtResource("2_5m7vn")
 
 [node name="NewGame" type="Button" parent="."]
 anchors_preset = 8
@@ -13,18 +76,20 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -86.0
-offset_top = -49.5
-offset_right = 86.0
-offset_bottom = 49.5
+offset_left = -88.0
+offset_top = -28.0
+offset_right = 807.0
+offset_bottom = 329.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.2, 0.2)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = SubResource("Theme_th6nn")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
-text = "New Game"
+icon = ExtResource("3_6g8vo")
+flat = true
 script = ExtResource("1_2tuvu")
 
 [node name="Quit" type="Button" parent="."]
@@ -33,17 +98,25 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -61.5
-offset_top = 115.5
-offset_right = 61.5
-offset_bottom = 180.5
+offset_left = -88.0
+offset_top = 50.0
+offset_right = 815.0
+offset_bottom = 404.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.2, 0.2)
 size_flags_horizontal = 4
 size_flags_vertical = 4
-text = "Quit
-"
+icon = ExtResource("5_5le40")
+flat = true
 script = ExtResource("2_t7645")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(112, 536)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_1gy86")
+autoplay = "default"
 
 [connection signal="pressed" from="NewGame" to="NewGame" method="_on_pressed"]
 [connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]

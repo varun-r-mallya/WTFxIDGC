@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=3 uid="uid://cuyoxacnxv36q"]
 
 [ext_resource type="Script" path="res://scenes/scripts/player.gd" id="1_7ga3t"]
-[ext_resource type="Texture2D" uid="uid://rqtw23lt2kds" path="res://Assets/sprites/Untitled-1-01.png" id="2_he52h"]
+[ext_resource type="Texture2D" uid="uid://rqtw23lt2kds" path="res://assets/sprites/Untitled-1-01.png" id="2_he52h"]
 [ext_resource type="Script" path="res://scenes/scripts/RayCast2D.gd" id="3_muqsm"]
-[ext_resource type="AudioStream" uid="uid://cdaqrl2nc5h3a" path="res://Assets/sounds/jump.wav" id="4_7d32j"]
+[ext_resource type="AudioStream" uid="uid://cdaqrl2nc5h3a" path="res://assets/sounds/jump.wav" id="4_7d32j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cl7e1"]
 atlas = ExtResource("2_he52h")
