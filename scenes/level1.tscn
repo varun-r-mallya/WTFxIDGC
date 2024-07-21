@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://bk25ywvvmj3sx"]
+[gd_scene load_steps=53 format=3 uid="uid://bk25ywvvmj3sx"]
 
 [ext_resource type="PackedScene" uid="uid://cuyoxacnxv36q" path="res://scenes/player.tscn" id="1_47qec"]
 [ext_resource type="Script" path="res://scenes/scripts/level1.gd" id="1_sko76"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://haech2wrw7xg" path="res://Assets/sprites/background final1.png" id="14_s85vp"]
 [ext_resource type="AudioStream" uid="uid://daff6pcdqye6v" path="res://Assets/sounds/powerup.wav" id="15_63x6n"]
 [ext_resource type="FontFile" uid="uid://b73uqebagycff" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="19_foajy"]
+[ext_resource type="AudioStream" uid="uid://c1mgqyu05hl74" path="res://Assets/music/level1.mp3" id="21_0caby"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o1q1d"]
 texture = ExtResource("2_nf713")
@@ -1476,6 +1477,10 @@ label_settings = SubResource("LabelSettings_ssa2d")
 
 [node name="powerup" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("15_63x6n")
+
+[node name="level1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("21_0caby")
+autoplay = true
 
 [connection signal="exit" from="." to="Boundary/Exit" method="_on_level_1_exit"]
 [connection signal="shoot" from="Player" to="BulletManager" method="_on_player_shoot"]
