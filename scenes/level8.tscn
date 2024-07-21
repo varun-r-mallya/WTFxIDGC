@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://cc1ky1l77fj1m"]
+[gd_scene load_steps=39 format=3 uid="uid://cc1ky1l77fj1m"]
 
 [ext_resource type="Script" path="res://scenes/scripts/level1.gd" id="1_5krko"]
 [ext_resource type="Texture2D" uid="uid://bwjj5dbmub3mc" path="res://assets/sprites/world_tileset.png" id="2_ds6bf"]
@@ -13,8 +13,6 @@
 [ext_resource type="Script" path="res://scenes/scripts/KillZone.gd" id="11_5q5dn"]
 [ext_resource type="Script" path="res://scenes/scripts/Exit.gd" id="12_v8qaw"]
 [ext_resource type="Texture2D" uid="uid://4g0ka3ilx1fk" path="res://assets/sprites/new-arrow.png" id="13_76qpo"]
-[ext_resource type="Script" path="res://scenes/scripts/Coin.gd" id="14_o7ljl"]
-[ext_resource type="Texture2D" uid="uid://d0w0ytq5qcyun" path="res://assets/sprites/coin.png" id="15_uo618"]
 [ext_resource type="Texture2D" uid="uid://2lfailf1kbou" path="res://assets/sprites/refresh.png" id="16_k8mua"]
 [ext_resource type="Script" path="res://scenes/scripts/restart.gd" id="17_x75f2"]
 [ext_resource type="Texture2D" uid="uid://haech2wrw7xg" path="res://assets/sprites/background final1.png" id="18_toctu"]
@@ -1255,101 +1253,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qmexn"]
-atlas = ExtResource("15_uo618")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_28qc8"]
-atlas = ExtResource("15_uo618")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eil3y"]
-atlas = ExtResource("15_uo618")
-region = Rect2(32, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8lku1"]
-atlas = ExtResource("15_uo618")
-region = Rect2(48, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b6vex"]
-atlas = ExtResource("15_uo618")
-region = Rect2(64, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ukx0o"]
-atlas = ExtResource("15_uo618")
-region = Rect2(80, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_r6rnw"]
-atlas = ExtResource("15_uo618")
-region = Rect2(96, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_315qp"]
-atlas = ExtResource("15_uo618")
-region = Rect2(112, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v6id2"]
-atlas = ExtResource("15_uo618")
-region = Rect2(128, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cotmw"]
-atlas = ExtResource("15_uo618")
-region = Rect2(144, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_48cpj"]
-atlas = ExtResource("15_uo618")
-region = Rect2(160, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gy47v"]
-atlas = ExtResource("15_uo618")
-region = Rect2(176, 0, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_x61qb"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qmexn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_28qc8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_eil3y")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8lku1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b6vex")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ukx0o")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_r6rnw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_315qp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_v6id2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cotmw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_48cpj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gy47v")
-}],
-"loop": true,
-"name": &"default",
-"speed": 10.0
-}]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_2fbbv"]
-radius = 5.09902
-
 [sub_resource type="LabelSettings" id="LabelSettings_ssa2d"]
 font = ExtResource("19_rndo4")
 font_size = 8
@@ -1440,18 +1343,6 @@ autoplay = "default"
 frame_progress = 0.282252
 flip_v = true
 
-[node name="Orb" type="Area2D" parent="."]
-position = Vector2(428, 247)
-script = ExtResource("14_o7ljl")
-metadata/_edit_group_ = true
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Orb"]
-sprite_frames = SubResource("SpriteFrames_x61qb")
-autoplay = "default"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Orb"]
-shape = SubResource("CircleShape2D_2fbbv")
-
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="restart" type="Button" parent="UI"]
@@ -1497,6 +1388,4 @@ autoplay = true
 [connection signal="send_detect" from="BulletManager" to="Scripts" method="_on_bullet_manager_send_detect"]
 [connection signal="body_entered" from="Boundary/KillZone" to="Boundary/KillZone" method="_on_body_entered"]
 [connection signal="body_entered" from="Boundary/Exit" to="Boundary/Exit" method="_on_body_entered"]
-[connection signal="body_entered" from="Orb" to="Orb" method="_on_body_entered"]
-[connection signal="point" from="Orb" to="." method="_on_coin_point"]
 [connection signal="pressed" from="UI/restart" to="UI/restart" method="_on_pressed"]
