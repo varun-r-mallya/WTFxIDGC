@@ -1,24 +1,25 @@
-[gd_scene load_steps=39 format=3 uid="uid://cc1ky1l77fj1m"]
+[gd_scene load_steps=40 format=3 uid="uid://cjp5ag0fdsqfn"]
 
 [ext_resource type="Script" path="res://scenes/scripts/level1.gd" id="1_5krko"]
-[ext_resource type="Texture2D" uid="uid://bwjj5dbmub3mc" path="res://assets/sprites/world_tileset.png" id="2_ds6bf"]
-[ext_resource type="Texture2D" uid="uid://yar42hqol3dk" path="res://assets/sprites/colorFINAL-yellowl.png" id="3_rh0os"]
-[ext_resource type="Texture2D" uid="uid://cifn1d5w5o56y" path="res://assets/sprites/left cloudsl.png" id="4_qe53q"]
+[ext_resource type="Texture2D" uid="uid://bwjj5dbmub3mc" path="res://Assets/sprites/world_tileset.png" id="2_ds6bf"]
+[ext_resource type="Texture2D" uid="uid://yar42hqol3dk" path="res://Assets/sprites/colorFINAL-yellowl.png" id="3_rh0os"]
+[ext_resource type="Texture2D" uid="uid://cifn1d5w5o56y" path="res://Assets/sprites/left cloudsl.png" id="4_qe53q"]
 [ext_resource type="PackedScene" uid="uid://cuyoxacnxv36q" path="res://scenes/player.tscn" id="5_uiker"]
-[ext_resource type="Texture2D" uid="uid://d1arc1s4xa74x" path="res://assets/sprites/break-animatn.png" id="6_oopxw"]
-[ext_resource type="Texture2D" uid="uid://da6n0jlrscol8" path="res://assets/sprites/tiles_new.png" id="7_p0fc8"]
+[ext_resource type="Texture2D" uid="uid://d1arc1s4xa74x" path="res://Assets/sprites/break-animatn.png" id="6_oopxw"]
+[ext_resource type="Texture2D" uid="uid://da6n0jlrscol8" path="res://Assets/sprites/tiles_new.png" id="7_p0fc8"]
 [ext_resource type="Script" path="res://scenes/scripts/Scripts.gd" id="8_r0wug"]
 [ext_resource type="Script" path="res://scenes/scripts/BulletManager.gd" id="9_s6smp"]
 [ext_resource type="PackedScene" uid="uid://dk6rfx6nbu5o1" path="res://scenes/bullet.tscn" id="10_x1hyl"]
 [ext_resource type="Script" path="res://scenes/scripts/KillZone.gd" id="11_5q5dn"]
 [ext_resource type="Script" path="res://scenes/scripts/Exit.gd" id="12_v8qaw"]
-[ext_resource type="Texture2D" uid="uid://4g0ka3ilx1fk" path="res://assets/sprites/new-arrow.png" id="13_76qpo"]
-[ext_resource type="Texture2D" uid="uid://2lfailf1kbou" path="res://assets/sprites/refresh.png" id="16_k8mua"]
+[ext_resource type="Texture2D" uid="uid://4g0ka3ilx1fk" path="res://Assets/sprites/new-arrow.png" id="13_76qpo"]
+[ext_resource type="AudioStream" uid="uid://dswjpk763ths" path="res://Assets/sounds/levelchange.wav" id="14_48kqu"]
+[ext_resource type="Texture2D" uid="uid://2lfailf1kbou" path="res://Assets/sprites/refresh.png" id="16_k8mua"]
 [ext_resource type="Script" path="res://scenes/scripts/restart.gd" id="17_x75f2"]
-[ext_resource type="Texture2D" uid="uid://haech2wrw7xg" path="res://assets/sprites/background final1.png" id="18_toctu"]
-[ext_resource type="FontFile" uid="uid://b73uqebagycff" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="19_rndo4"]
-[ext_resource type="AudioStream" uid="uid://daff6pcdqye6v" path="res://assets/sounds/powerup.wav" id="20_ffqhk"]
-[ext_resource type="AudioStream" uid="uid://c1mgqyu05hl74" path="res://assets/music/level1.mp3" id="21_34qoj"]
+[ext_resource type="Texture2D" uid="uid://haech2wrw7xg" path="res://Assets/sprites/background final1.png" id="18_toctu"]
+[ext_resource type="FontFile" uid="uid://b73uqebagycff" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="19_rndo4"]
+[ext_resource type="AudioStream" uid="uid://daff6pcdqye6v" path="res://Assets/sounds/powerup.wav" id="20_ffqhk"]
+[ext_resource type="AudioStream" uid="uid://c1mgqyu05hl74" path="res://Assets/music/level1.mp3" id="21_34qoj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o1q1d"]
 texture = ExtResource("2_ds6bf")
@@ -1342,6 +1343,9 @@ sprite_frames = SubResource("SpriteFrames_umquv")
 autoplay = "default"
 frame_progress = 0.282252
 flip_v = true
+
+[node name="levelchange" type="AudioStreamPlayer" parent="Boundary/Exit"]
+stream = ExtResource("14_48kqu")
 
 [node name="UI" type="CanvasLayer" parent="."]
 

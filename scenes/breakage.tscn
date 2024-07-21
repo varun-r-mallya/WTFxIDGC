@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://8nlyadbw12vp"]
+
+[ext_resource type="AudioStream" uid="uid://dq7lso7slppad" path="res://Assets/music/music.mp3" id="1_apmc6"]
+
+[node name="Breakage" type="AudioStreamPlayer"]
+stream = ExtResource("1_apmc6")
