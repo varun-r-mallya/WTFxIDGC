@@ -18,7 +18,7 @@ func _physics_process(delta):
 	#print("RayCast2D target_position:", raycast.target_position)
 	#print("Is colliding:", raycast.is_colliding())
 	
-	raycast.target_position = direction*10
+	raycast.target_position = direction*15
 
 	if raycast.is_colliding():
 		detect.emit(raycast.get_collision_point()+direction.normalized(),self)

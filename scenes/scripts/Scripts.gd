@@ -14,7 +14,7 @@ func _ready():
 	pass
 
 func animation(pos):
-	tilemap.set_cell(0, pos, 0, Vector2(3,0), 0)
+	tilemap.set_cell(0, pos, 1, Vector2(0,0), 0)
 
 #func _input(event):
 	#if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
