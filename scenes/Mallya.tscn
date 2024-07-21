@@ -2,18 +2,18 @@
 
 [ext_resource type="Script" path="res://scenes/scripts/level1.gd" id="1_5wmxu"]
 [ext_resource type="PackedScene" uid="uid://cuyoxacnxv36q" path="res://scenes/player.tscn" id="1_got14"]
-[ext_resource type="Texture2D" uid="uid://bwjj5dbmub3mc" path="res://Assets/sprites/world_tileset.png" id="2_2qy1b"]
-[ext_resource type="Texture2D" uid="uid://da6n0jlrscol8" path="res://Assets/sprites/tiles_new.png" id="4_1ihuw"]
+[ext_resource type="Texture2D" uid="uid://bwjj5dbmub3mc" path="res://assets/sprites/world_tileset.png" id="2_2qy1b"]
+[ext_resource type="Texture2D" uid="uid://da6n0jlrscol8" path="res://assets/sprites/tiles_new.png" id="4_1ihuw"]
 [ext_resource type="Script" path="res://scenes/scripts/Scripts.gd" id="4_58kim"]
 [ext_resource type="Script" path="res://scenes/scripts/BulletManager.gd" id="5_s23bk"]
 [ext_resource type="PackedScene" uid="uid://dk6rfx6nbu5o1" path="res://scenes/bullet.tscn" id="6_hcmc1"]
 [ext_resource type="Script" path="res://scenes/scripts/KillZone.gd" id="8_0aj6t"]
 [ext_resource type="Script" path="res://scenes/scripts/Exit.gd" id="9_t87ya"]
 [ext_resource type="Script" path="res://scenes/scripts/Coin.gd" id="10_3xvtd"]
-[ext_resource type="Texture2D" uid="uid://qg1epnsv43af" path="res://Assets/sprites/arrow.png" id="10_p0lry"]
-[ext_resource type="Texture2D" uid="uid://d0w0ytq5qcyun" path="res://Assets/sprites/coin.png" id="11_lqker"]
+[ext_resource type="Texture2D" uid="uid://qg1epnsv43af" path="res://assets/sprites/arrow.png" id="10_p0lry"]
+[ext_resource type="Texture2D" uid="uid://d0w0ytq5qcyun" path="res://assets/sprites/coin.png" id="11_lqker"]
 [ext_resource type="Script" path="res://scenes/scripts/restart.gd" id="12_qcqxo"]
-[ext_resource type="Texture2D" uid="uid://2lfailf1kbou" path="res://Assets/sprites/refresh.png" id="13_cm655"]
+[ext_resource type="Texture2D" uid="uid://2lfailf1kbou" path="res://assets/sprites/refresh.png" id="13_cm655"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_arxba"]
 texture = ExtResource("2_2qy1b")
