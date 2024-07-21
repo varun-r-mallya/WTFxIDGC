@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://h04blba5pbd"]
+[gd_scene load_steps=4 format=3 uid="uid://h04blba5pbd"]
 
 [ext_resource type="Script" path="res://scenes/scripts/NewGame.gd" id="1_2tuvu"]
 [ext_resource type="Script" path="res://scenes/scripts/Quit.gd" id="2_t7645"]
+
+[sub_resource type="Theme" id="Theme_th6nn"]
 
 [node name="UI" type="CanvasLayer"]
 
@@ -11,14 +13,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -46.5
-offset_top = -15.5
-offset_right = 46.5
-offset_bottom = 15.5
+offset_left = -86.0
+offset_top = -49.5
+offset_right = 86.0
+offset_bottom = 49.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme = SubResource("Theme_th6nn")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
 text = "New Game"
 script = ExtResource("1_2tuvu")
 
@@ -28,10 +33,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -40.0
-offset_top = 47.0
-offset_right = 39.0
-offset_bottom = 81.0
+offset_left = -61.5
+offset_top = 115.5
+offset_right = 61.5
+offset_bottom = 180.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
