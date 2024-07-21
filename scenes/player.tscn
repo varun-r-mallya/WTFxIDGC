@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://cuyoxacnxv36q"]
+[gd_scene load_steps=12 format=3 uid="uid://cuyoxacnxv36q"]
 
 [ext_resource type="Script" path="res://scenes/scripts/player.gd" id="1_7ga3t"]
 [ext_resource type="Texture2D" uid="uid://rqtw23lt2kds" path="res://Assets/sprites/Untitled-1-01.png" id="2_he52h"]
 [ext_resource type="Script" path="res://scenes/scripts/RayCast2D.gd" id="3_muqsm"]
+[ext_resource type="AudioStream" uid="uid://cdaqrl2nc5h3a" path="res://Assets/sounds/jump.wav" id="4_7d32j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cl7e1"]
 atlas = ExtResource("2_he52h")
@@ -78,5 +79,8 @@ script = ExtResource("3_muqsm")
 
 [node name="ShotTimer" type="Timer" parent="."]
 autostart = true
+
+[node name="Jump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_7d32j")
 
 [connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]

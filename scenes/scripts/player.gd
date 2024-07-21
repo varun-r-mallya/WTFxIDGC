@@ -11,6 +11,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var ray_cast = $RayCast2D
 @onready var tile_map: TileMap = $TileMap
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var jump_sound = $Jump
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -19,6 +20,7 @@ func _physics_process(delta):
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
+		jump_sound.play()
 		velocity.y = JUMP_VELOCITY
 	
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and can_shoot:

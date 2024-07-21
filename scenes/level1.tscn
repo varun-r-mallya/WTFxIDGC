@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://bk25ywvvmj3sx"]
+[gd_scene load_steps=52 format=3 uid="uid://bk25ywvvmj3sx"]
 
 [ext_resource type="PackedScene" uid="uid://cuyoxacnxv36q" path="res://scenes/player.tscn" id="1_47qec"]
 [ext_resource type="Script" path="res://scenes/scripts/level1.gd" id="1_sko76"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://qg1epnsv43af" path="res://Assets/sprites/arrow.png" id="10_uildg"]
 [ext_resource type="Texture2D" uid="uid://2lfailf1kbou" path="res://Assets/sprites/refresh.png" id="13_bchce"]
 [ext_resource type="Texture2D" uid="uid://haech2wrw7xg" path="res://Assets/sprites/background final1.png" id="14_s85vp"]
+[ext_resource type="AudioStream" uid="uid://daff6pcdqye6v" path="res://Assets/sounds/powerup.wav" id="15_63x6n"]
 [ext_resource type="FontFile" uid="uid://b73uqebagycff" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="19_foajy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o1q1d"]
@@ -1472,6 +1473,9 @@ offset_right = 319.0
 offset_bottom = 144.0
 text = "Lorem Ipsum dolor. Sit amet."
 label_settings = SubResource("LabelSettings_ssa2d")
+
+[node name="powerup" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_63x6n")
 
 [connection signal="exit" from="." to="Boundary/Exit" method="_on_level_1_exit"]
 [connection signal="shoot" from="Player" to="BulletManager" method="_on_player_shoot"]
