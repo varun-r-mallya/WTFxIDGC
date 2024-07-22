@@ -1,8 +1,7 @@
-[gd_scene load_steps=42 format=3 uid="uid://cjp5ag0fdsqfn"]
+[gd_scene load_steps=45 format=3 uid="uid://cjp5ag0fdsqfn"]
 
 [ext_resource type="Script" path="res://scenes/scripts/level1.gd" id="1_5krko"]
 [ext_resource type="Texture2D" uid="uid://bjgfvdi086om1" path="res://assets/sprites/bgs/bg/pink.png" id="2_4jvlf"]
-[ext_resource type="Texture2D" uid="uid://bwjj5dbmub3mc" path="res://assets/sprites/world_tileset.png" id="2_ds6bf"]
 [ext_resource type="Texture2D" uid="uid://yar42hqol3dk" path="res://assets/sprites/colorFINAL-yellowl.png" id="3_rh0os"]
 [ext_resource type="Texture2D" uid="uid://cifn1d5w5o56y" path="res://assets/sprites/left cloudsl.png" id="4_qe53q"]
 [ext_resource type="PackedScene" uid="uid://cuyoxacnxv36q" path="res://scenes/player.tscn" id="5_uiker"]
@@ -20,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://haech2wrw7xg" path="res://assets/sprites/background final1.png" id="18_toctu"]
 [ext_resource type="FontFile" uid="uid://b73uqebagycff" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="19_rndo4"]
 [ext_resource type="AudioStream" uid="uid://daff6pcdqye6v" path="res://assets/sounds/powerup.wav" id="20_ffqhk"]
+[ext_resource type="Script" path="res://scenes/scripts/Coin.gd" id="20_t1kp2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1p70k"]
 texture = ExtResource("2_4jvlf")
@@ -517,8 +517,11 @@ texture = ExtResource("2_4jvlf")
 39:16/0 = 0
 40:16/0 = 0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2vrd4"]
+load_path = "res://.godot/imported/world_tileset.png-61a32465f33c3d9d3bfecb75b6485009.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o1q1d"]
-texture = ExtResource("2_ds6bf")
+texture = SubResource("CompressedTexture2D_2vrd4")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1211,7 +1214,7 @@ sources/3 = SubResource("TileSetAtlasSource_184d7")
 sources/0 = SubResource("TileSetAtlasSource_1p70k")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_arxba"]
-texture = ExtResource("2_ds6bf")
+texture = SubResource("CompressedTexture2D_2vrd4")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1757,6 +1760,17 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_21h3m"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_los7m"]
+radius = 5.09902
+
 [sub_resource type="LabelSettings" id="LabelSettings_8tmdq"]
 font = ExtResource("19_rndo4")
 font_size = 32
@@ -1812,7 +1826,7 @@ shape = SubResource("WorldBoundaryShape2D_8gr8s")
 script = ExtResource("11_5q5dn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary/KillZone"]
-position = Vector2(21, 127)
+position = Vector2(22, 160)
 shape = SubResource("WorldBoundaryShape2D_g7eyc")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Boundary"]
@@ -1830,20 +1844,6 @@ position = Vector2(51, 93)
 position = Vector2(139, 71)
 rotation = 1.5708
 shape = SubResource("WorldBoundaryShape2D_0iwkm")
-
-[node name="UI" type="CanvasLayer" parent="."]
-
-[node name="restart" type="Button" parent="UI"]
-offset_left = 1070.0
-offset_top = 21.0
-offset_right = 1135.0
-offset_bottom = 52.0
-icon = ExtResource("16_k8mua")
-script = ExtResource("17_x75f2")
-
-[node name="level" type="Label" parent="UI"]
-offset_right = 40.0
-offset_bottom = 23.0
 
 [node name="BG" type="Node2D" parent="."]
 show_behind_parent = true
@@ -1884,6 +1884,32 @@ flip_v = true
 [node name="levelchange" type="AudioStreamPlayer" parent="Exit"]
 stream = ExtResource("14_48kqu")
 
+[node name="Orb" type="Area2D" parent="."]
+position = Vector2(3, 237)
+script = ExtResource("20_t1kp2")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Orb"]
+sprite_frames = SubResource("SpriteFrames_21h3m")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Orb"]
+shape = SubResource("CircleShape2D_los7m")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="restart" type="Button" parent="UI"]
+offset_left = 1070.0
+offset_top = 21.0
+offset_right = 1135.0
+offset_bottom = 52.0
+icon = ExtResource("16_k8mua")
+script = ExtResource("17_x75f2")
+
+[node name="level" type="Label" parent="UI"]
+offset_right = 40.0
+offset_bottom = 23.0
+
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Game Over" type="Label" parent="."]
@@ -1898,5 +1924,6 @@ label_settings = SubResource("LabelSettings_8tmdq")
 [connection signal="shoot" from="Player" to="BulletManager" method="_on_player_shoot"]
 [connection signal="send_detect" from="BulletManager" to="Scripts" method="_on_bullet_manager_send_detect"]
 [connection signal="body_entered" from="Boundary/KillZone" to="Boundary/KillZone" method="_on_body_entered"]
-[connection signal="pressed" from="UI/restart" to="UI/restart" method="_on_pressed"]
 [connection signal="body_entered" from="Exit" to="Exit" method="_on_body_entered"]
+[connection signal="body_entered" from="Orb" to="Orb" method="_on_body_entered"]
+[connection signal="pressed" from="UI/restart" to="UI/restart" method="_on_pressed"]

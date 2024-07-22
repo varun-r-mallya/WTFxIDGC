@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://dnocxwslj3c5s" path="res://assets/sprites/bgs/left_bg/orange l.png" id="2_ahc66"]
 [ext_resource type="PackedScene" uid="uid://cuyoxacnxv36q" path="res://scenes/player.tscn" id="2_pvvb4"]
 [ext_resource type="Texture2D" uid="uid://yar42hqol3dk" path="res://assets/sprites/colorFINAL-yellowl.png" id="3_ekb4i"]
-[ext_resource type="Texture2D" uid="uid://bwjj5dbmub3mc" path="res://assets/sprites/world_tileset.png" id="3_nhn5y"]
 [ext_resource type="Texture2D" uid="uid://da6n0jlrscol8" path="res://assets/sprites/tiles_new.png" id="4_htifw"]
 [ext_resource type="Texture2D" uid="uid://cifn1d5w5o56y" path="res://assets/sprites/left cloudsl.png" id="4_oocbx"]
 [ext_resource type="Script" path="res://scenes/scripts/Scripts.gd" id="5_6nx0q"]
@@ -18,8 +17,8 @@
 [ext_resource type="Script" path="res://scenes/scripts/restart.gd" id="13_jqkwx"]
 [ext_resource type="Texture2D" uid="uid://4g0ka3ilx1fk" path="res://assets/sprites/new-arrow.png" id="13_ofcr8"]
 [ext_resource type="AudioStream" uid="uid://dswjpk763ths" path="res://assets/sounds/levelchange.wav" id="14_i8j27"]
-[ext_resource type="Texture2D" uid="uid://ssfxnyefmb3x" path="res://assets/sprites/pixil-frame-0 (3) (2).png" id="15_k73rp"]
 [ext_resource type="Texture2D" uid="uid://2lfailf1kbou" path="res://assets/sprites/refresh.png" id="16_wofoa"]
+[ext_resource type="Texture2D" uid="uid://iajmlxvjxf7m" path="res://assets/sprites/pixil-frame-0 (3) (3).png" id="18_jj4e4"]
 [ext_resource type="FontFile" uid="uid://b73uqebagycff" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="19_v0c8n"]
 [ext_resource type="AudioStream" uid="uid://daff6pcdqye6v" path="res://assets/sounds/powerup.wav" id="20_wk8st"]
 [ext_resource type="Texture2D" uid="uid://dsv3eo4xmfng1" path="res://assets/sprites/bgs/bg/orange.png" id="21_b413v"]
@@ -314,8 +313,11 @@ texture = ExtResource("2_ahc66")
 11:21/0 = 0
 12:21/0 = 0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2vrd4"]
+load_path = "res://.godot/imported/world_tileset.png-61a32465f33c3d9d3bfecb75b6485009.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o1q1d"]
-texture = ExtResource("3_nhn5y")
+texture = SubResource("CompressedTexture2D_2vrd4")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -2178,7 +2180,7 @@ sources/0 = SubResource("TileSetAtlasSource_t53qh")
 sources/4 = SubResource("TileSetAtlasSource_3fgf7")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_arxba"]
-texture = ExtResource("3_nhn5y")
+texture = SubResource("CompressedTexture2D_2vrd4")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -2714,36 +2716,36 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_y1icm"]
-atlas = ExtResource("15_k73rp")
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0kn0"]
+atlas = ExtResource("18_jj4e4")
 region = Rect2(0, 0, 18, 30)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bfwft"]
-atlas = ExtResource("15_k73rp")
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxt2y"]
+atlas = ExtResource("18_jj4e4")
 region = Rect2(18, 0, 18, 30)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xd1t2"]
-atlas = ExtResource("15_k73rp")
+[sub_resource type="AtlasTexture" id="AtlasTexture_1k3wl"]
+atlas = ExtResource("18_jj4e4")
 region = Rect2(36, 0, 18, 30)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_55mml"]
-atlas = ExtResource("15_k73rp")
+[sub_resource type="AtlasTexture" id="AtlasTexture_rfw0i"]
+atlas = ExtResource("18_jj4e4")
 region = Rect2(54, 0, 18, 30)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x61qb"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_y1icm")
+"texture": SubResource("AtlasTexture_o0kn0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bfwft")
+"texture": SubResource("AtlasTexture_cxt2y")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xd1t2")
+"texture": SubResource("AtlasTexture_1k3wl")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_55mml")
+"texture": SubResource("AtlasTexture_rfw0i")
 }],
 "loop": true,
 "name": &"default",

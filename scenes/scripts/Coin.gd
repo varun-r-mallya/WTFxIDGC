@@ -10,7 +10,7 @@ func _process(delta):
 	pass
 
 func _on_body_entered(body):
-	#change_all_tiles()
+	#change_all_tiles())
 	point.emit()
 	queue_free()
 #

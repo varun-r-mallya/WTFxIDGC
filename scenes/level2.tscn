@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://scenes/scripts/level1.gd" id="1_5wmxu"]
 [ext_resource type="PackedScene" uid="uid://cuyoxacnxv36q" path="res://scenes/player.tscn" id="1_got14"]
-[ext_resource type="Texture2D" uid="uid://bwjj5dbmub3mc" path="res://assets/sprites/world_tileset.png" id="2_2qy1b"]
 [ext_resource type="AudioStream" uid="uid://daff6pcdqye6v" path="res://assets/sounds/powerup.wav" id="2_g35w5"]
 [ext_resource type="Texture2D" uid="uid://yar42hqol3dk" path="res://assets/sprites/colorFINAL-yellowl.png" id="3_fvgbs"]
 [ext_resource type="Texture2D" uid="uid://ckwfkmq8cs4wt" path="res://assets/sprites/bgs/right/bwr.png" id="3_gfnl6"]
@@ -20,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://2lfailf1kbou" path="res://assets/sprites/refresh.png" id="13_cm655"]
 [ext_resource type="Texture2D" uid="uid://4g0ka3ilx1fk" path="res://assets/sprites/new-arrow.png" id="14_xvig5"]
 [ext_resource type="AudioStream" uid="uid://dswjpk763ths" path="res://assets/sounds/levelchange.wav" id="15_46pif"]
-[ext_resource type="Texture2D" uid="uid://hspdxygc1put" path="res://assets/sprites/red-orb.png" id="16_sgmp6"]
+[ext_resource type="Texture2D" uid="uid://ssfxnyefmb3x" path="res://assets/sprites/pixil-frame-0 (3) (2).png" id="19_18n1i"]
 [ext_resource type="FontFile" uid="uid://b73uqebagycff" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="19_ovg2p"]
 [ext_resource type="Texture2D" uid="uid://b7ihfly0j4yps" path="res://assets/sprites/bgs/bg/red.png" id="22_qoo56"]
 
@@ -313,8 +312,11 @@ texture = ExtResource("3_gfnl6")
 51:21/0 = 0
 52:21/0 = 0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2vrd4"]
+load_path = "res://.godot/imported/world_tileset.png-61a32465f33c3d9d3bfecb75b6485009.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o1q1d"]
-texture = ExtResource("2_2qy1b")
+texture = SubResource("CompressedTexture2D_2vrd4")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1297,7 +1299,7 @@ sources/0 = SubResource("TileSetAtlasSource_hk75b")
 sources/4 = SubResource("TileSetAtlasSource_q3hdo")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_arxba"]
-texture = ExtResource("2_2qy1b")
+texture = SubResource("CompressedTexture2D_2vrd4")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1834,36 +1836,36 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_81itq"]
-atlas = ExtResource("16_sgmp6")
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5v4o"]
+atlas = ExtResource("19_18n1i")
 region = Rect2(0, 0, 18, 30)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l53wl"]
-atlas = ExtResource("16_sgmp6")
+[sub_resource type="AtlasTexture" id="AtlasTexture_3t4nb"]
+atlas = ExtResource("19_18n1i")
 region = Rect2(18, 0, 18, 30)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ijbew"]
-atlas = ExtResource("16_sgmp6")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fc35e"]
+atlas = ExtResource("19_18n1i")
 region = Rect2(36, 0, 18, 30)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jnn82"]
-atlas = ExtResource("16_sgmp6")
+[sub_resource type="AtlasTexture" id="AtlasTexture_rwp3t"]
+atlas = ExtResource("19_18n1i")
 region = Rect2(54, 0, 18, 30)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x61qb"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_81itq")
+"texture": SubResource("AtlasTexture_w5v4o")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_l53wl")
+"texture": SubResource("AtlasTexture_3t4nb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ijbew")
+"texture": SubResource("AtlasTexture_fc35e")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jnn82")
+"texture": SubResource("AtlasTexture_rwp3t")
 }],
 "loop": true,
 "name": &"default",
