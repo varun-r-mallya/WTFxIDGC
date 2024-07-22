@@ -1446,7 +1446,9 @@ offset_left = -79.0
 offset_top = 121.0
 offset_right = 319.0
 offset_bottom = 144.0
-text = "Help bring colours back!"
+text = "Click to Shoot. 
+WSAD to move around.
+"
 label_settings = SubResource("LabelSettings_ssa2d")
 
 [node name="powerup" type="AudioStreamPlayer2D" parent="."]

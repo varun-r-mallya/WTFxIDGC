@@ -2010,7 +2010,7 @@ offset_left = -79.0
 offset_top = 121.0
 offset_right = 319.0
 offset_bottom = 144.0
-text = "Balls"
+text = "Colours, come to me!"
 label_settings = SubResource("LabelSettings_ls0om")
 
 [connection signal="exit" from="." to="Boundary/Exit" method="_on_level_1_exit"]

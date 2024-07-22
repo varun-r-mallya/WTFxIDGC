@@ -21,6 +21,7 @@ func _on_body_entered(body):
 			Global.next_scene = path_name
 			Global.count += 1
 			var name = "res://scenes/loading" + str(Global.count) + ".tscn"
+			#var name = "res://scenes/loading" + str(9) + ".tscn"
 			get_tree().change_scene_to_file(name)
 			#get_tree().paused = false
 			#get_tree().change_scene_to_file(path_name)

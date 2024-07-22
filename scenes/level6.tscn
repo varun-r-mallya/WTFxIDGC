@@ -2006,7 +2006,7 @@ offset_left = -79.0
 offset_top = 121.0
 offset_right = 319.0
 offset_bottom = 144.0
-text = "Lorem Ipsum dolor. Sit amet."
+text = "Shadows, begone!"
 label_settings = SubResource("LabelSettings_ssa2d")
 
 [node name="Node2D" type="Node2D" parent="."]
