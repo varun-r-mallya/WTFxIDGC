@@ -8,11 +8,11 @@
 [Chromatica](https://varunrmallya.itch.io/chromaticaweb)
 
 ## Credits
-[Vanshika Singh](https://www.linkedin.com/in/vanshika-singh-85173428a/) ( Art and design ) 
-[Priyanshu Bawane](https://www.linkedin.com/in/priyanshu-bawane-bb265b281/) ( Art )
-[Adesh Gupta](https://www.linkedin.com/in/adesh-g/) ( Developer )
-[Ayush Chandekar](https://www.linkedin.com/in/ayush-chandekar-721316201/) (Developer)
-[Maulik Barot](https://www.linkedin.com/in/maulik-barot-3855622a6/) (Developer)
-[Varun R Mallya](https://www.linkedin.com/in/varun-r-mallya-973b81141/) (Developer)
-
+- [Vanshika Singh](https://www.linkedin.com/in/vanshika-singh-85173428a/) ( Art and design ) 
+- [Priyanshu Bawane](https://www.linkedin.com/in/priyanshu-bawane-bb265b281/) ( Art )
+- [Adesh Gupta](https://www.linkedin.com/in/adesh-g/) ( Developer )
+- [Ayush Chandekar](https://www.linkedin.com/in/ayush-chandekar-721316201/) (Developer)
+- [Maulik Barot](https://www.linkedin.com/in/maulik-barot-3855622a6/) (Developer)
+- [Varun R Mallya](https://www.linkedin.com/in/varun-r-mallya-973b81141/) (Developer)
+<br>
 We would also like to thank [Toby Fox](https://en.wikipedia.org/wiki/Toby_Fox) for the Background Music.
