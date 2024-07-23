@@ -15,4 +15,4 @@
 - [Maulik Barot](https://www.linkedin.com/in/maulik-barot-3855622a6/) (Developer)
 - [Varun R Mallya](https://www.linkedin.com/in/varun-r-mallya-973b81141/) (Developer)
 <br></br>
-We would also like to thank [Toby Fox]("https://en.wikipedia.org/wiki/Toby_Fox/") for the Background Music.
+We would also like to thank [Toby Fox](https://en.wikipedia.org/wiki/Toby_Fox/) for the Background Music.
