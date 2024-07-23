@@ -1,5 +1,5 @@
-# Chromatica ( SDSLabs team submission for WTFxIDGC 2024 Game Jam)
-### by SDSLabs
+# Chromatica 
+(SDSLabs team submission for WTFxIDGC 2024 Game Jam)
 - Written in *Godot*, this beautiful piece of art builds on the themes of `Chain Reactions` and `Starting from nothing`
 - You start with a world devoid of colours where you need to help Iris collect colour crystals scattered across 7 rainbow themed levels.
 - Our unique game mechanic makes it incredibly hard and frustruating to cross levels. When you break a wooden block, the other blocks around it break with a time delay. You can find the logic for this `scenes/scripts/Scripts.gd`.
